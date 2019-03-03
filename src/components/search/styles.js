@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const Wrapper = styled.div`
 export const BlockSearch = styled.div`
   width: 800px;
   min-width: 320px;
-  height: 300px;
+  height: 400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -60,8 +61,7 @@ export const ButtonText = styled.span`
 export const BlockMovie = styled.div`
   width: 100%;
   min-width: 310px;
-  height: 100px;
-  margin: 0 5px;
+  margin: 15px 5px 0 5px;
   display: flex;
   flex-direction: row;
 `;
@@ -89,9 +89,6 @@ export const Plot = styled.p`
   color: rgba(21, 43, 75, .8);
   font-size: 16px;
 `;
-
-// red #ff0053
-
 export const BlockCircle = styled.div`
   display: flex; 
   width: 100%;
@@ -107,4 +104,21 @@ export const Circle = styled.div`
   border-radius: 50%;
   background-color: rgba(51,168,255,1);
   animation: circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+`;
+export const Look = styled(Link)`
+  width: 150px;
+  padding: 5px 10px;
+  margin: 15px 0 0 0;
+  border: 1px solid #ff0053;
+  outline: none;
+  border-radius: 5px;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .1s;
+  color: rgba(21, 43, 75, .8);
+  &:active {
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, .5);
+  }
 `;
