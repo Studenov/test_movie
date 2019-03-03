@@ -7,7 +7,7 @@ import { searchMovie, clearMovie } from 'store/search/actions';
 import * as Styled from './styles';
 
 
-export class Search extends Component {
+class Search extends Component {
   state = {
     title: ''
   }
@@ -31,7 +31,7 @@ export class Search extends Component {
       actionClearMovie();
       return actionSearchMovie(title);
     }
-    return console.log('error');
+    return alert('Fill in the title field');
   }
 
   render() {
@@ -55,6 +55,7 @@ export class Search extends Component {
                   <Styled.Title>{movie.Title}</Styled.Title>
                   <Styled.Year>{movie.Year}</Styled.Year>
                   <Styled.Plot>{movie.Plot}</Styled.Plot>
+                  <Styled.Look to={`/${movie.imdbID}`}>More...</Styled.Look>
                 </Styled.Description>
               </React.Fragment>
             ) : null}
